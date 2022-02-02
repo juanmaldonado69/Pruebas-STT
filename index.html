@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/calendario.js"></script>    
+    <script type="text/javascript" src="js/random.js"></script>
+    <script type="text/javascript" src="js/tabla.js"></script>
+    <script type="text/javascript" src="js/Listadoletras.js"></script>    
+    <script type="text/javascript" src="js/consumoAPI.js"></script>
+</head>
+<body>
+
+    <H1> Prueba Técnica JS ITOS </H1> 
+    <form>
+        <p>
+            <h4>
+                1. Crear una página nueva con las siguientes funcionalidades que puedan ser aplicadas a través de un botón cada una. 
+            </h4>
+        </p> 
+        <p> 
+            <h4>
+                2. Crear un input donde se ingrese un año y determina si es bisiesto en el calendario gregoriano.
+            </h4>           
+        </p>
+        <label>Digite año</label>
+        <input type="text" name="anio" id="anio" maxlength="4" min="1" >
+        <input type="button" onclick="bisiesto()" value="Validar año gregoriano">
+        <div id='respuesta'></div>
+       
+        <p>
+            <h4>
+                3. Crear dos input, filas y columnas donde se ingresan estos datos y se genere automáticamente
+            una tabla con las dimensiones suministradas. 
+            </h4>
+        </p>     
+        <label for=""> Numero de filas</label>
+        <input type="number" id="filas">
+        <label for=""> Numero de columnas</label>
+        <input type="number" id="columnas" >
+        <input type="button" onclick="creartabla()" value="Generar tabla">
+        <div id="dibujartabla"></div>
+        
+        <p>
+            <h4>
+                4. Generar un arreglo con 20 números aleatorios de 1 a 100 y luego organizarlo de menor a
+                mayor sin utilizar la sentencia .sort(). 
+            </h4>            
+        </p>
+            <input type="button" onclick="getRandomInt()" value="Generar arreglo">
+            <div id="listadoNumeros"></div>
+        
+        <p>
+            <h4>5. Generar dos arreglos A y B con 10 valores aleatorios de letras del abecedario y mostrar los
+            siguientes resultados: 
+        </h4>
+            <div id="listadoLetras"></div>
+            </br>
+            ● Unión: 𝐴⋃𝐵
+            <div id="AUB"></div>
+            </br>
+            ● Intersección 𝐴⋂𝐵
+            <div id="AnB"></div>
+            </br>
+            ● Diferencia: 𝐴∆𝐵
+            <div id="ADB"></div>  <div id="BDA"></div>
+            </br>
+            ● Diferencia Simétrica: 𝐴 − 𝐵
+            <div id="AmenosB"></div>
+        </p>
+        <input type="button" onclick="generateRandomTexto()" value="Generar listado">
+        </br>
+        <p>
+            <h4>
+            6. Se debe realizar una consulta tipo Rest al API de banco de MX del tipo de cambio de los
+            últimos 5 días y mostrarlo en una tabla con fecha y tipo de cambio, a través de una página
+            html básica 
+            </h4>
+            <div id="apirest"></div>
+        </p> 
+            
+
+           
+     
+    </form>
+
+</body>
+</html>
